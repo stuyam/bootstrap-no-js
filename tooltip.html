@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!--     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+        margin: 40px;
+      }
+      [data-toggle=tooltip]{
+        position: relative;
+        overflow: visible;
+      }
+      [data-toggle=tooltip]:hover:before, [data-toggle=tooltip]:hover:after {
+        display:block;
+        position:absolute;
+        color:white;
+      }
+/*      [data-toggle=tooltip]:focus:before, [data-toggle=tooltip]:focus:after{
+        outline: 0;
+      }*/
+      [data-toggle=tooltip]:hover:before {
+        position: absolute;
+        z-index: 1070;
+        display: block;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1.42857143;
+        text-align: left;
+        text-align: start;
+        text-decoration: none;
+        text-shadow: none;
+        text-transform: none;
+        letter-spacing: normal;
+        word-break: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: normal;
+        width: auto;
+        filter: alpha(opacity=0);
+        opacity: 1;
+        line-break: auto;
+
+        max-width: 200px;
+        padding: 3px 8px;
+        color: #fff;
+        text-align: center;
+        background-color: #000;
+        border-radius: 4px;
+        content:attr(title);
+      }
+      [data-placement=top]:hover:before{
+        top: -100%;
+      }
+      [data-placement=right]:hover:before{
+        left: 100%;
+      }
+      [data-placement=left]:hover:before{
+        left: -100%;
+      }
+      [data-placement=bottom]:hover:before{
+        bottom: -100%;
+      }
+
+
+      [data-toggle=tooltip]:hover:after {
+        content:'';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+      }
+      [data-placement=top]:hover:after {
+        top: calc(-100% + 23px);
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px 5px 0;
+        border-top-color: #000;
+      }
+      [data-placement=right]:hover:after {
+        right: calc(-100% + 53px);
+        top: 50%;
+        margin-top: -5px;
+        border-width: 5px 5px 5px 0;
+        border-right-color: #000;
+      }
+      [data-placement=left]:hover:after {
+        top: 50%;
+        left: calc(-100% + 23px);
+        /*margin-top: -5px;*/
+        border-width: 5px 0 5px 5px;
+        border-left-color: #000;
+      }
+      [data-placement=bottom]:hover:after {
+        bottom: calc(-100% + 23px);
+        left: 50%;
+        margin-left: -5px;
+        border-width: 0 5px 5px;
+        border-bottom-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+
+  </body>
+</html>
