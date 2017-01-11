@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!--     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .collapse-radio {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      .collapse{
+        display: block;
+        transform: translateY(-120%);
+        overflow: hidden;
+        /*-webkit-transition: top 0s linear .15s, left 0s linear .15s, bottom 0s linear .15s, right 0s linear .15s, opacity .15s linear, background .15s linear;*/
+        /*-o-transition: top 0s linear .15s, left 0s linear .15s, bottom 0s linear .15s, right 0s linear .15s, opacity .15s linear, background .15s linear;*/
+        transition: transform .25s linear;
+      }
+      .collapse-radio:checked + .collapse{
+        transform: translateY(0);
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+
+    <label for="collapseExample" class="btn btn-primary" type="button" aria-expanded="false" aria-controls="collapseExample">
+      Button with data-target
+    </label>
+    <input class="collapse-radio" type="checkbox" id="collapseExample">
+    <div class="collapse">
+      <div class="well">
+        ...
+      </div>
+    </div>
+
+  </body>
+</html>
