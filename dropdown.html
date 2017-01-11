@@ -9,22 +9,18 @@
 
     <link rel="stylesheet" href="style.css">
     <style>
-      .dropdown input[type=checkbox]{
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-      .dropdown input[type=checkbox]:checked ~ .dropdown-menu {
+      .dropdown [data-toggle=dropdown]:focus ~ .dropdown-menu{
         display: block;
       }
     </style>
   </head>
   <body>
 
-    <label class="dropdown btn btn-primary">
-      <input type="checkbox">
-      Dropdown trigger
-      <span class="caret"></span>
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown trigger
+        <span class="caret"></span>
+      </button>
       <ul class="dropdown-menu" aria-labelledby="dLabel">
         <li>
           <a href="#">Test Link</a>
@@ -36,7 +32,7 @@
           <a href="#">Test Link</a>
         </li>
       </ul>
-    </label>
+    </div>
 
   </body>
 </html>
