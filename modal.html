@@ -15,38 +15,37 @@
         left: -9999px;
       }
       .modal{
-        position: fixed;
         display: block;
-        top: -9999px;
-        left: -9999px;
-        bottom: 9999px;
-        right: 9999px;
+        bottom: auto;
+        height: 0;
+        overflow: hidden;
         opacity: 0;
         background: rgba(0,0,0,0);
       }
 
       .modal.fade{
-        -webkit-transition: top 0s linear .15s, left 0s linear .15s, bottom 0s linear .15s, right 0s linear .15s, opacity .15s linear, background .15s linear;
-        -o-transition: top 0s linear .15s, left 0s linear .15s, bottom 0s linear .15s, right 0s linear .15s, opacity .15s linear, background .15s linear;
-        transition: top 0s linear .15s, left 0s linear .15s, bottom 0s linear .15s, right 0s linear .15s, opacity .15s linear, background .15s linear;
+        -webkit-transition: height 0s linear .15s, bottom 0s linear .15s, opacity .15s linear, background .15s linear;
+             -o-transition: height 0s linear .15s, bottom 0s linear .15s, opacity .15s linear, background .15s linear;
+                transition: height 0s linear .15s, bottom 0s linear .15s, opacity .15s linear, background .15s linear;
       }
 
       .modal > label{
         display: block;
-        width: 100%;
-        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         position: absolute;
       }
 
       .modal-checkbox:checked + .modal{
+        height: auto;
+        height: 100vh;
+        display: block;
         opacity: 1;
-        overflow: hidden;
         overflow-x: hidden;
         overflow-y: auto;
-        top: 0;
-        left: 0;
         bottom: 0;
-        right: 0;
         background: rgba(0,0,0,0.5);
       }
 
@@ -58,9 +57,9 @@
       }
 
       .modal-checkbox:checked + .modal.fade{
-        -webkit-transition: top 0s ease-out 0s, left 0s ease-out 0s, bottom 0s ease-out 0s, right 0s ease-out 0s, opacity .15s linear, background .15s linear;
-        -o-transition: top 0s ease-out 0s, left 0s ease-out 0s, bottom 0s ease-out 0s, right 0s ease-out 0s, opacity .15s linear, background .15s linear;
-        transition: top 0s ease-out 0s, left 0s ease-out 0s, bottom 0s ease-out 0s, right 0s ease-out 0s, opacity .15s linear, background .15s linear;
+        -webkit-transition: height 0s linear 0s, bottom 0s linear 0s, opacity .15s linear, background .15s linear;
+             -o-transition: height 0s linear 0s, bottom 0s linear 0s, opacity .15s linear, background .15s linear;
+                transition: height 0s linear 0s, bottom 0s linear 0s, opacity .15s linear, background .15s linear;
       }
     </style>
   </head>
@@ -81,8 +80,7 @@
             <label type="button" class="close" for="triggerModal" aria-label="Close"><span aria-hidden="true">&times;</span></label>
             <h4 class="modal-title" id="myModalLabel">Modal title</h4>
           </div>
-          <div class="modal-body">
-            ...
+          <div class="modal-body"> <h4>Text in a modal</h4> <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p> <h4>Popover in a modal</h4> <p>This <a href="#" class="btn btn-default popover-test" role="button" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p> <h4>Tooltips in a modal</h4> <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p> <hr> <h4>Overflowing text to show scroll behavior</h4> <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p> <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p> <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p> <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p> <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p> <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p> <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p> <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p> <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
           </div>
           <div class="modal-footer">
             <label class="btn btn-default" for="triggerModal">Close</label>
