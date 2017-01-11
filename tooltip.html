@@ -14,7 +14,7 @@
       }
       [data-toggle=tooltip]{
         position: relative;
-        overflow: visible;
+        /*overflow: visible;*/
       }
       [data-toggle=tooltip]:hover:before, [data-toggle=tooltip]:hover:after {
         display:block;
@@ -57,18 +57,17 @@
         content:attr(title);
       }
       [data-placement=top]:hover:before{
-        top: -100%;
+        bottom: calc(100% + 10px);
       }
       [data-placement=right]:hover:before{
-        left: 100%;
+        left: calc(100% + 10px);
       }
       [data-placement=left]:hover:before{
-        left: -100%;
+        right: calc(100% + 10px);
       }
       [data-placement=bottom]:hover:before{
-        bottom: -100%;
+        top: calc(100% + 10px);
       }
-
 
       [data-toggle=tooltip]:hover:after {
         content:'';
@@ -79,30 +78,30 @@
         border-style: solid;
       }
       [data-placement=top]:hover:after {
-        top: calc(-100% + 23px);
+        bottom: calc(100% + 5px);
         left: 50%;
-        margin-left: -5px;
+        margin-left: -2.5px;
         border-width: 5px 5px 0;
         border-top-color: #000;
       }
       [data-placement=right]:hover:after {
-        right: calc(-100% + 53px);
+        left: calc(100% + 5px);
         top: 50%;
-        margin-top: -5px;
+        margin-top: -2.5px;
         border-width: 5px 5px 5px 0;
         border-right-color: #000;
       }
       [data-placement=left]:hover:after {
+        right: calc(100% + 5px);
         top: 50%;
-        left: calc(-100% + 23px);
-        /*margin-top: -5px;*/
+        margin-top: -2.5px;
         border-width: 5px 0 5px 5px;
         border-left-color: #000;
       }
       [data-placement=bottom]:hover:after {
-        bottom: calc(-100% + 23px);
+        top: calc(100% + 5px);
         left: 50%;
-        margin-left: -5px;
+        margin-left: -2.5px;
         border-width: 0 5px 5px;
         border-bottom-color: #000;
       }

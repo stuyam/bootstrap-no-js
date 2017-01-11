@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!--     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .alert-checkbox {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      .alert-checkbox:checked + .alert {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+
+    <input type="checkbox" class="alert-checkbox" id="alertClose">
+    <div class="alert alert-warning alert-dismissible fade in" role="alert">
+      <label type="button" class="close" for="alertClose" aria-label="Close"><span aria-hidden="true">×</span></label>
+      <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+    </div>
+
+  </body>
+</html>
