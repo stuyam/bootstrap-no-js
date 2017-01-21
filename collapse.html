@@ -15,16 +15,10 @@
         left: -9999px;
       }
       .collapse{
-        display: block;
-        transform: translateY(-120%);
-        overflow: hidden;
-        /*-webkit-transition: top 0s linear .15s, left 0s linear .15s, bottom 0s linear .15s, right 0s linear .15s, opacity .15s linear, background .15s linear;*/
-        /*-o-transition: top 0s linear .15s, left 0s linear .15s, bottom 0s linear .15s, right 0s linear .15s, opacity .15s linear, background .15s linear;*/
-        transition: transform .25s linear;
+        display: none;
       }
       .collapse-radio:checked + .collapse{
-        transform: translateY(0);
-        overflow-y: auto;
+        display: block;
       }
     </style>
   </head>

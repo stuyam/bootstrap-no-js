@@ -16,7 +16,10 @@
         position: relative;
         /*overflow: visible;*/
       }
-      [data-toggle=tooltip]:hover:before, [data-toggle=tooltip]:hover:after {
+      [data-toggle=tooltip] > .tooltip-body{
+        display: none;
+      }
+      [data-toggle=tooltip]:hover > .tooltip-body, [data-toggle=tooltip]:hover > .tooltip-body:after {
         display:block;
         position:absolute;
         color:white;
@@ -24,7 +27,7 @@
 /*      [data-toggle=tooltip]:focus:before, [data-toggle=tooltip]:focus:after{
         outline: 0;
       }*/
-      [data-toggle=tooltip]:hover:before {
+      [data-toggle=tooltip]:hover > .tooltip-body {
         position: absolute;
         z-index: 1070;
         display: block;
@@ -35,7 +38,7 @@
         line-height: 1.42857143;
         text-align: left;
         text-align: start;
-        text-decoration: none;
+/*        text-decoration: none;
         text-shadow: none;
         text-transform: none;
         letter-spacing: normal;
@@ -43,7 +46,7 @@
         word-spacing: normal;
         word-wrap: normal;
         white-space: normal;
-        width: auto;
+        width: auto;*/
         filter: alpha(opacity=0);
         opacity: 1;
         line-break: auto;
@@ -56,20 +59,20 @@
         border-radius: 4px;
         content:attr(title);
       }
-      [data-placement=top]:hover:before{
+      [data-placement=top]:hover > .tooltip-body{
         bottom: calc(100% + 10px);
       }
-      [data-placement=right]:hover:before{
+      [data-placement=right]:hover > .tooltip-body{
         left: calc(100% + 10px);
       }
-      [data-placement=left]:hover:before{
+      [data-placement=left]:hover > .tooltip-body{
         right: calc(100% + 10px);
       }
-      [data-placement=bottom]:hover:before{
+      [data-placement=bottom]:hover > .tooltip-body{
         top: calc(100% + 10px);
       }
 
-      [data-toggle=tooltip]:hover:after {
+      [data-toggle=tooltip]:hover > .tooltip-body:after {
         content:'';
         position: absolute;
         width: 0;
@@ -77,28 +80,28 @@
         border-color: transparent;
         border-style: solid;
       }
-      [data-placement=top]:hover:after {
+      [data-placement=top]:hover > .tooltip-body:after {
         bottom: calc(100% + 5px);
         left: 50%;
         margin-left: -2.5px;
         border-width: 5px 5px 0;
         border-top-color: #000;
       }
-      [data-placement=right]:hover:after {
+      [data-placement=right]:hover > .tooltip-body:after {
         left: calc(100% + 5px);
         top: 50%;
         margin-top: -2.5px;
         border-width: 5px 5px 5px 0;
         border-right-color: #000;
       }
-      [data-placement=left]:hover:after {
+      [data-placement=left]:hover > .tooltip-body:after {
         right: calc(100% + 5px);
         top: 50%;
         margin-top: -2.5px;
         border-width: 5px 0 5px 5px;
         border-left-color: #000;
       }
-      [data-placement=bottom]:hover:after {
+      [data-placement=bottom]:hover > .tooltip-body:after {
         top: calc(100% + 5px);
         left: 50%;
         margin-left: -2.5px;
@@ -109,10 +112,17 @@
   </head>
   <body>
 
-    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left">
+      <div class="tooltip-body">Tooltip is infact on the left! And allows html!</div>
+      Tooltip on left
+    </button>
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top">
+      <div class="tooltip-body">Tooltip is infact on the left! And allows html!</div>
+    Tooltip on top</button>
     <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+      <div class="tooltip-body">Tooltip is infact on the left! And allows html!</div>
+    Tooltip on right</button>
 
   </body>
 </html>
